@@ -1,0 +1,1 @@
+pyinstaller pytsf.spec --onefile
