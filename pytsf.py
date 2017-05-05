@@ -1,5 +1,38 @@
-import sheetsapi
-from datetime import date, time, datetime
+from datetime import datetime
+from math import floor
+
+import pygsheets
+from appJar import gui
+
+app = gui()
+
+app.setBg("lightgray")
+
+
+app.addOptionBox("months", ["msc1", "msc2", "msc3"])
+app.addButton("settings", "S", 0, 2)
+ref = app.addButton("refresh", "R", 0, 3)
+app.addButton("submit", "GO", 0, 4)
+
+app.startFrame("calendar")
+row = app.getRow()
+for week in range(0, 4):
+    row += 1
+    for day in range(1, 8):
+        app.addCheckBox(str(day+week*7), column=day, row=row)
+app.stopFrame()
+
+frame = app.getFrameWidget("calendar")
+app.setFrameBg("calendar", "red")
+
+
+# app.go()
+
+
+
+gc = pygsheets.authorize()
+sh = gc.open_by_url("https://docs.google.com/spreadsheets/d/1jXygiAnEQ-BzK7ZMkduJMA0QETZ2_-8IE-jUQsmZ7-4/edit#gid=10370340")
+print(wks[3][3])
 
 
 
@@ -32,7 +65,7 @@ class Day:
         self.date = datetime.strptime(self.date, "%Y-%m-%d").date()
 
         # startTime validation
-        self.startTime = TimeVal(self.startTime)
+        #self.startTime = TimeVal(self.startTime)
 
 
         print("Day--->", self.date, self.startTime, self.startLunch, self.endLunch, self.endTime)
@@ -51,8 +84,8 @@ def orderAsMonth(valueRanges):
 
 def main():
     ranges = [(col + str(day)) for day in range(1, 32) for col in ["A", "B", "C", "D", "E"]]
-    valueRanges = sheetsapi.getValueRanges(ranges)
-    orderAsMonth(valueRanges)
+    #valueRanges = sheetsapi.getValueRanges(ranges)
+    #orderAsMonth(valueRanges)
 
 
 if __name__ == '__main__':
