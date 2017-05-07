@@ -1,8 +1,7 @@
 # https://developers.google.com/sheets/api/quickstart/python
-
-import httplib2
 import os
 
+import httplib2
 from apiclient import discovery
 from oauth2client import client
 from oauth2client import tools
@@ -47,7 +46,37 @@ def get_credentials():
         print('Storing credentials to ' + credential_path)
     return credentials
 
-def getValueRanges(ranges):
+
+
+
+
+def _get_service():
+    credentials = get_credentials()
+    http = credentials.authorize(httplib2.Http())
+    discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?'
+                    'version=v4')
+    service = discovery.build('sheets', 'v4', http=http, discoveryServiceUrl=discoveryUrl)
+    return service
+
+
+def get_worksheets(spreadsheetId):
+    spreadsheet = _get_service().spreadsheets().get(spreadsheetId=spreadsheetId).execute()
+    return spreadsheet['sheets']
+
+def get_range_data(spreadsheetId, range):
+    return _get_service().spreadsheets().values().get(spreadsheetId=spreadsheetId, range=range).execute()
+
+
+
+
+
+
+
+
+
+
+
+def getValueRanges():
     """Shows basic usage of the Sheets API.
 
     Creates a Sheets API service object and prints the names and majors of
@@ -61,9 +90,21 @@ def getValueRanges(ranges):
     service = discovery.build('sheets', 'v4', http=http, discoveryServiceUrl=discoveryUrl)
 
     spreadsheetId = '1jXygiAnEQ-BzK7ZMkduJMA0QETZ2_-8IE-jUQsmZ7-4'
-    result = service.spreadsheets().values().batchGet(spreadsheetId=spreadsheetId, ranges=ranges).execute()
-    valueRanges = result.get('valueRanges', [])
-    return valueRanges
+    # result = service.spreadsheets().values().batchGet(spreadsheetId=spreadsheetId, ranges=ranges).execute()
+    result = service.spreadsheets().get(spreadsheetId=spreadsheetId).execute()
+    # sheets = result.get('sheets')
+    print(result)
+    # for sheet in sheets:
+        # print(sheet['properties']['title'])
+
+    # result = service.spreadsheets().values().get(spreadsheetId=spreadsheetId, range="marzec").execute()
+    # print(result['values'])
+
+    # valueRanges = result.get('valueRanges', [])
+    # return result
+
+
+
 
 
 
