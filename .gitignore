@@ -1,5 +1,6 @@
 # MY IGNORES
 build/
+__pycache__/
 
 
 
