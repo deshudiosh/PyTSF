@@ -2,53 +2,6 @@ import datetime
 
 import sheetsapi
 
-
-
-
-def validate_time(time_str, forced_date):
-    #remove all characters except for digits and ":"
-    """
-    Composes datetime object, based on time string and datetime.date object
-    Returns None if time_str in not in XX:XX format
-    :rtype: datetime.datetime
-    """
-    time_str = ''.join(c for c in time_str if c in "0123456789:")
-
-    h_m_list = time_str.split(":")
-    if not len(h_m_list) >= 2: return None
-
-    h, m = [int(val) for val in h_m_list[:2]]
-
-    # solve hours
-    is_next_day = not (h % 24 == h)
-    if is_next_day: h -= 24
-
-
-    # solve minutes
-    if m > 59: return None
-
-    # round, and fix 58 and 59 rounding to 60
-    m = int(5 * round(float(m)/5))
-    if m == 60: m = 55
-
-
-    # format to XX:XX
-    h_str = str(h)
-    if len(h_str) < 2: h_str = "0" + h_str
-    m_str = str(m)
-    if len(m_str) < 2: m_str = "0" + m_str
-
-    time = as_time(h_str + ":" + m_str)
-
-    # add day if needed
-    if is_next_day: forced_date += datetime.timedelta(days=1)
-
-    # return combined
-    return datetime.datetime.combine(forced_date, time)
-
-
-
-
 class Day:
     def __init__(self, rowData):
         """ Unpack row data to properties, BUT omit 6th column """
@@ -73,20 +26,17 @@ class Day:
 
         print(self.start_time, "-->", self.start_lunch, "-->", self.end_lunch, "-->", self.end_time)
 
-        #TODO: CZEMU 6 stycznia jest brany pod uwage?
-
-
+        # TODO: CZEMU 6 stycznia jest brany pod uwage?
         # validate work1/2 somehow (num of elements?)
         # parse to Work class, containing properties (klient, osoba zlecajaca, itd)
-
         # assign "isValid" value!
-        pass
 
 
 class Month:
     def __init__(self, name, sheetData):
         self.days = []
         self.month_name = name
+        # TODO: move all validation to Day class for readability
         for row in sheetData:
             # If first cell exists and contains date
             if len(row) > 0 and is_date_string(row[0]):
@@ -95,14 +45,20 @@ class Month:
                     self.days.append(Day(row))
 
 
-def getMonths(spreadsheetId):
+def get_months(spreadsheet_id):
     # Get worksheets
-    worksheets = sheetsapi.get_worksheets(spreadsheetId)
+    worksheets = sheetsapi.get_worksheets(spreadsheet_id)
+
     # Collect worksheets names
     names = [sheet['properties']['title'] for sheet in worksheets]
-    # Get data for each sheet name (name is range too!)
-    sheets_data = [sheetsapi.get_range_data(spreadsheetId, name) for name in names]
-    # If cell A1 contains date string, collect index of sheet (sheet is valid month data)
+
+    # Get data A1:H31 for each month (sheet name is valid A1 notation range too!)
+    # TODO: Collect only needed cells
+    # ranges = [(col + str(day)) for day in range(1, 32) for col in ["A", "B", "C", "D", "E"]]
+    sheets_data = [sheetsapi.get_range_data(spreadsheet_id, name) for name in names]
+
+    # Determine if sheet has month data.
+    # If cell A1 contains date string, collect index of sheet (sheet is valid month data).
     valid_months_indexes = [index for index in range(len(sheets_data))
                             if is_date_string(sheets_data[index]['values'][0][0])]
     # Collect parsed months from valid sheets
@@ -111,26 +67,67 @@ def getMonths(spreadsheetId):
     return months
 
 
+def validate_time(time_str: str, forced_date: datetime.date) -> datetime.datetime:
+    """
+    Validate time in XX:XX format.
+    Return None if fail.
+    """
+    # remove all characters except for digits and ":"
+    time_str = ''.join(c for c in time_str if c in "0123456789:")
 
-def as_time(timeStr):
-    return datetime.datetime.strptime(timeStr, "%H:%M").time()
+    h_m_list = time_str.split(":")
+    if not len(h_m_list) >= 2: return None
+
+    h, m = [int(val) for val in h_m_list[:2]]
+
+    # solve hours
+    is_next_day = not (h % 24 == h)
+    if is_next_day: h -= 24
 
 
-def is_time_string(timeStr):
+    # solve minutes
+    if m > 59: return None
+
+    # round, and fix 58 and 59 rounding to 60
+    m = int(5 * round(float(m)/5))
+    if m == 60:m = 55
+
+
+    # format to XX:XX
+    h_str = str(h)
+    if len(h_str) < 2: h_str = "0" + h_str
+    m_str = str(m)
+    if len(m_str) < 2: m_str = "0" + m_str
+
+    time = as_time(h_str + ":" + m_str)
+
+    # add day if needed
+    if is_next_day: forced_date += datetime.timedelta(days=1)
+
+    # return combined
+    return datetime.datetime.combine(forced_date, time)
+
+
+def as_time(time_str):
+    return datetime.datetime.strptime(time_str, "%H:%M").time()
+
+
+def is_time_string(time_str):
     try:
-        time = as_time(timeStr)
+        time = as_time(time_str)
     except:
         time = None
 
     return isinstance(time, datetime.time)
 
-def as_date(dateStr):
-    return datetime.datetime.strptime(dateStr, "%Y-%m-%d").date()
+
+def as_date(date_str):
+    return datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
 
 
-def is_date_string(dateStr):
+def is_date_string(date_str):
     try:
-        date = as_date(dateStr)
+        date = as_date(date_str)
     except:
         date = None
 
