@@ -2,10 +2,16 @@
 
 block_cipher = None
 
+
+added_files = [  
+	('C:/Python35/Lib/site-packages/remi/res/style.css', '/res/style.css')
+	]
+
+
 a = Analysis(['pytsf.py'],
              pathex=[''],
              binaries=[],
-             datas=[],
+             datas=added_files,
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
