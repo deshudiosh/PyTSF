@@ -2,47 +2,62 @@ import datetime
 
 import sheetsapi
 
+
+def validate_work(work_str):
+    return None
+
+
 class Day:
-    def __init__(self, rowData):
-        """ Unpack row data to properties, BUT omit 6th column """
-        del rowData[5]
-        self.date, \
-        self.start_time, \
-        self.start_lunch, \
-        self.end_lunch, \
-        self.end_time, \
-        self.work1 = rowData[:6]
-        # there may be no work2 provided
-        self.work2 = rowData[6] if len(rowData) >= 7 else None
-        self._validate()
+    def __init__(self, row_data):
+        self.date = as_date(row_data[0])
 
-    def _validate(self):
-        self.date = as_date(self.date)
+        self.start_time = validate_time(row_data[1], self.date)
+        self.start_lunch = validate_time(row_data[2], self.date)
+        self.end_lunch = validate_time(row_data[3], self.date)
+        self.end_time = validate_time(row_data[4], self.date)
 
-        self.start_time = validate_time(self.start_time, self.date)
-        self.start_lunch = validate_time(self.start_lunch, self.date)
-        self.end_lunch = validate_time(self.end_lunch, self.date)
-        self.end_time = validate_time(self.end_time, self.date)
+        self.work1 = validate_work(row_data[5])
+        self.work1 = validate_work(row_data[6])
 
-        print(self.start_time, "-->", self.start_lunch, "-->", self.end_lunch, "-->", self.end_time)
+        self.is_valid = all([self.date,
+                             self.start_time,
+                             self.end_time])
+        #todo:dopisać worksy i dodać je do validacji
+        # print(self.date, self.is_valid, "   ", row_data)
 
-        # TODO: CZEMU 6 stycznia jest brany pod uwage?
-        # validate work1/2 somehow (num of elements?)
-        # parse to Work class, containing properties (klient, osoba zlecajaca, itd)
-        # assign "isValid" value!
 
 
 class Month:
     def __init__(self, name, sheetData):
         self.days = []
-        self.month_name = name
-        # TODO: move all validation to Day class for readability
+        self.name = name
+
         for row in sheetData:
-            # If first cell exists and contains date
-            if len(row) > 0 and is_date_string(row[0]):
-                # AND at least 6 columns of data provided
-                if len(row) >= 7:
-                    self.days.append(Day(row))
+            # Limit row to 8 columns
+            row = row[:8]
+
+            # remove trailing empty string values
+            for i, value in reversed(list(enumerate(row))):
+                clipAt = i+1
+                if value != "":
+                    break
+            row = row[:clipAt]
+
+            # Skip if row doesn't contain day data OR less then 7 columns provided
+            if not (len(row) > 0 and is_date_string(row[0])) or len(row) < 7:
+                continue
+
+            # If 7 columns provided, add empty one, so there is always 8 columns provided
+            if len(row) == 7:
+                row.append("")
+
+            # limit columns A B C D E G H (no column F)
+            del row[5]
+
+            self.days.append(Day(row))
+
+    def get_valid_days(self):
+        return [day for day in self.days]
 
 
 def get_months(spreadsheet_id):
@@ -84,14 +99,12 @@ def validate_time(time_str: str, forced_date: datetime.date) -> datetime.datetim
     is_next_day = not (h % 24 == h)
     if is_next_day: h -= 24
 
-
     # solve minutes
     if m > 59: return None
 
     # round, and fix 58 and 59 rounding to 60
-    m = int(5 * round(float(m)/5))
-    if m == 60:m = 55
-
+    m = int(5 * round(float(m) / 5))
+    if m == 60: m = 55
 
     # format to XX:XX
     h_str = str(h)

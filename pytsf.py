@@ -1,3 +1,4 @@
+import cmd_questions
 import gsheets_data_parser
 import gui
 
@@ -18,16 +19,15 @@ def tests():
 
 
 
+
 def refresh():
     """ Update data, refresh gui """
-    # months = gsheets_data_parser.get_months(settings['spreadsheetId'])
-    #gui.update??
-    # gui.update()
-
+    months = gsheets_data_parser.get_months(settings['spreadsheetId'])
+    cmd_questions.ask(months)
 
 
 def main():
-    gui.startApp()
+    # gui.startApp()
     refresh()
     # tests()
 

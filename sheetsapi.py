@@ -59,14 +59,17 @@ def _get_service():
     return service
 
 
-def get_worksheets(spreadsheetId):
-    spreadsheet = _get_service().spreadsheets().get(spreadsheetId=spreadsheetId).execute()
+def get_worksheets(spreadsheet_id):
+    spreadsheet = _get_service().spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
     return spreadsheet['sheets']
 
-def get_range_data(spreadsheetId, range):
-    return _get_service().spreadsheets().values().get(spreadsheetId=spreadsheetId, range=range).execute()
+
+def get_range_data(spreadsheet_id, range):
+    return _get_service().spreadsheets().values().get(spreadsheetId=spreadsheet_id, range=range).execute()
 
 
+def get_ranges_batch(spreadsheet_id, ranges):
+    return _get_service().spreadsheets().values().batchGet(spreadsheetId=spreadsheet_id, ranges=ranges).execute()
 
 
 
@@ -102,10 +105,5 @@ def getValueRanges():
 
     # valueRanges = result.get('valueRanges', [])
     # return result
-
-
-
-
-
 
 
