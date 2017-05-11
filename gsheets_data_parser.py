@@ -1,4 +1,5 @@
 import datetime
+import timeit
 
 import sheetsapi
 
@@ -32,7 +33,8 @@ class Month:
         self.days = []
         self.name = name
 
-        for row in sheetData:
+        # look for day data in 31 rows
+        for row in sheetData[:32]:
             # Limit row to 8 columns
             row = row[:8]
 
@@ -68,11 +70,9 @@ def get_months(spreadsheet_id):
     names = [sheet['properties']['title'] for sheet in worksheets]
 
     # Get data A1:H31 for each month (sheet name is valid A1 notation range too!)
-    # TODO: Collect only needed cells
-    # ranges = [(col + str(day)) for day in range(1, 32) for col in ["A", "B", "C", "D", "E"]]
     sheets_data = [sheetsapi.get_range_data(spreadsheet_id, name) for name in names]
 
-    # Determine if sheet has month data.
+    # Determine if sheet has month data:
     # If cell A1 contains date string, collect index of sheet (sheet is valid month data).
     valid_months_indexes = [index for index in range(len(sheets_data))
                             if is_date_string(sheets_data[index]['values'][0][0])]

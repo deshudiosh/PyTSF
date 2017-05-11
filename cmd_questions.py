@@ -1,3 +1,6 @@
+import form_filler
+
+
 def _ask_month(months):
 
     numbered_month_names = []
@@ -21,22 +24,38 @@ def _ask_month(months):
     _ask_days(months, chosen)
 
 def _get_int_ranges(ranges_str):
-    days_str = [char for char in days_str if char in "0123456789,-"]
-    return ["no kurwa, co to"]
+    ranges_str_list = "".join([char for char in ranges_str if char in "0123456789,-"]).split(",")
+    ranges = []
+    for rng in ranges_str_list:
+        if "-" in rng:
+            vals = rng.split("-")
+            if len(vals) == 2 and vals[0] < vals[1]:
+                ranges += [i for i in range( int(vals[0]), int(vals[1])+1 )]
+        else:
+            ranges.append(int(rng))
+
+    return sorted(ranges)
 
 def _ask_days(months, month_idx):
     month = months[month_idx]
     print("\nPoprawnie wypełnione dni w ({0}):".format(month.name))
     print([day.date.day for day in month.get_valid_days()])
-    print("\nWpisz które chcesz wypełnić. Np: 1, 2, 6, 12, 20-30.\nNapisz X aby cofnąć do wyboru miesiąca.")
-    days_str = str(input())
 
-    if days_str == "x":
-        _ask_month(months)
-        return
+    while True:
+        print("\nWpisz które chcesz wypełnić. Np: 1, 2, 6, 12, 20-30.\nNapisz X aby cofnąć do wyboru miesiąca.")
+        days_str = str(input())
 
-    print(_get_int_ranges(days_str))
+        if days_str == "x":
+            _ask_month(months)
+            return
+        else:
+            days = _get_int_ranges(days_str)
+            if len(days) >= 1:
+                break
 
+    print("\nTe dni będą wypelnione:")
+    print(days)
+    form_filler.fill(months, month_idx, days)
 
 def ask(months):
     print("""
@@ -46,7 +65,9 @@ def ask(months):
     Wisisz stówkę.
 
     """)
+
     _ask_month(months)
+
 
 
 

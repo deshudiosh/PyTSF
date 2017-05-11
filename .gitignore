@@ -3,6 +3,7 @@ build/
 __pycache__/
 client_secret.json
 sheets.googleapis.com-python.json
+.idea/
 
 
 
