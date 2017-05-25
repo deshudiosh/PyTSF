@@ -1,4 +1,4 @@
-import form_filler
+import filler
 
 
 def _ask_month(months):
@@ -55,7 +55,7 @@ def _ask_days(months, month_idx):
 
     print("\nTe dni będą wypelnione:")
     print(days)
-    form_filler.fill(months, month_idx, days)
+    filler.fill(months, month_idx, days)
 
 def ask(months):
     print("""

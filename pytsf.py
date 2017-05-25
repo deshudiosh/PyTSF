@@ -1,6 +1,7 @@
 import datetime
 
 import cmd_questions
+import filler
 import gsheets_data_parser
 
 settings = {"name": "Paweł Grzelak",
@@ -8,6 +9,8 @@ settings = {"name": "Paweł Grzelak",
 
 
 def tests():
+    day = gsheets_data_parser.Day(["2017-05-24", "10:20", "13:00", "13:30", "17:59", "xxxxxx", "xxxxxx"])
+    filler.fill_day(day)
     pass
 
 
