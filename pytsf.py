@@ -9,8 +9,15 @@ settings = {"name": "Paweł Grzelak",
 
 
 def tests():
-    day = gsheets_data_parser.Day(["2017-05-24", "10:20", "13:00", "13:30", "17:59", "xxxxxx", "xxxxxx"])
-    filler.fill_day(day)
+    day1 = gsheets_data_parser.Day(["2017-05-24", "10:20", "13:00", "13:30", "17:59", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", ""])
+    print(day1, "\n")
+    day2 = gsheets_data_parser.Day(["2017-05-24", "10:20", "", "", "17:59", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", ""])
+    print(day2, "\n")
+    day3 = gsheets_data_parser.Day(["2017-05-24", "10:20", "", "", "17:59", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", "MSD;MSD;Adam Urbaniak;MSD"])
+    print(day3, "\n")
+    day4 = gsheets_data_parser.Day(["2017-05-24", "10:20", "13:00", "13:30", "17:59", "Dzień wolny", ""])
+    print(day4, "\n")
+    # filler.fill_day(day)
     pass
 
 

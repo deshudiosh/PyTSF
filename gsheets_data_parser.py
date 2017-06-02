@@ -4,27 +4,135 @@ import timeit
 import sheetsapi
 
 
-def validate_work(work_str):
-    return None
+class Job(object):
+    def __init__(self, start = None, end = None, data = None, is_free_day = False, is_lunch = False):
+        self.is_free_day = is_free_day
+        self.is_lunch = is_lunch
+        # todo: assign elements (klient, projekt ect)
+
+    def __repr__(self) -> str:
+        if self.is_free_day:
+            s = "Freeday"
+        elif self.is_lunch:
+            s = "Lunch"
+        else:
+            s = "Work"
+
+        return "<" + s + ">"
 
 
 class Day:
     def __init__(self, row_data):
+        self.is_free_day = False
+
         self.date = as_date(row_data[0])
 
-        self.start_time = validate_time(row_data[1], self.date)
-        self.start_lunch = validate_time(row_data[2], self.date)
-        self.end_lunch = validate_time(row_data[3], self.date)
-        self.end_time = validate_time(row_data[4], self.date)
+        self.start_time = Day._validate_time(row_data[1], self.date)
+        self.start_lunch = Day._validate_time(row_data[2], self.date)
+        self.end_lunch = Day._validate_time(row_data[3], self.date)
+        self.end_time = Day._validate_time(row_data[4], self.date)
 
-        self.work1 = validate_work(row_data[5])
-        self.work1 = validate_work(row_data[6])
+        self.work1 = self._validate_work(row_data[5])
+        self.work2 = self._validate_work(row_data[6])
 
-        self.is_valid = all([self.date,
-                             self.start_time,
-                             self.end_time])
-        #todo:dopisać worksy i dodać je do validacji
-        # print(self.date, self.is_valid, "   ", row_data)
+        # todo: consider removing is_valid and replace it with jobs[] length check
+        self.is_valid = all([self.date, self.start_time, self.end_time, self.work1])
+
+        self.has_lunch = all([self.start_lunch, self.end_lunch])
+        self.single_job = self.work1 and not self.work2
+
+        self.jobs = []
+
+        # if self.is_valid:
+        print(row_data)
+        # print(" ".join(["valid:", str(self.is_valid),
+        #                 "   has lunch:", str(self.has_lunch),
+        #                 "   single_job:", str(self.single_job)]))
+        self._create_jobs()
+
+    def __repr__(self):
+        return "<" + str(len(self.jobs)) + " -> " + str(self.jobs) + ">"
+
+    def _create_jobs(self):
+        """ Day schemes """
+        # -> free day"""
+        if self.is_free_day:
+            self.jobs.append(Job(is_free_day=True))
+            return
+
+        # -> day with lunch
+        if self.has_lunch:
+            if self.single_job:  # -> work, lunch
+                self.jobs.append(Job(self.start_time, self.start_lunch, self.work1))
+                self.jobs.append(Job(self.start_lunch, self.end_lunch, is_lunch=True))
+                self.jobs.append(Job(self.end_lunch, self.end_time, self.work1))
+            else:  # -> work, lunch, work
+                self.jobs.append(Job(self.start_time, self.start_lunch, self.work1))
+                self.jobs.append(Job(self.start_lunch, self.end_lunch, is_lunch=True))
+                self.jobs.append(Job(self.end_lunch, self.end_time, self.work2))
+        # -> no lunch
+        else:
+            # -> work
+            if self.single_job:
+                self.jobs.append(Job(self.start_time, self.end_time, self.work1))
+            # -> work, work
+            else:
+                midtime = self.start_time + (self.end_time - self.start_time)/2
+                midtime = Day._validate_time(":".join([str(midtime.hour), str(midtime.minute)]), self.date)
+
+                self.jobs.append(Job(self.start_time, midtime, self.work1))
+                self.jobs.append(Job(midtime, self.end_time, self.work2))
+
+    def _validate_work(self, work_str: str):
+        elements = [element.strip() for element in work_str.split(";")][0:5]
+
+        if len(elements) == 1 and elements[0].lower() in ["dzień wolny", "dzien wolny", "freeday", "urlop"]:
+            self.is_free_day = True
+            return elements[0]
+        # if 4 elements provided and all are nonempty string
+        elif len(elements) == 4 and all(element for element in elements):
+            return elements
+        else:
+            return None
+
+    @staticmethod
+    def _validate_time(time_str: str, forced_date: datetime.date) -> datetime.datetime:
+        """
+        Validate time in XX:XX format.
+        Return None if fail.
+        """
+        # remove all characters except for digits and ":"
+        time_str = ''.join(c for c in time_str if c in "0123456789:")
+
+        h_m_list = time_str.split(":")
+        if not len(h_m_list) >= 2: return None
+
+        h, m = [int(val) for val in h_m_list[:2]]
+
+        # solve hours
+        is_next_day = not (h % 24 == h)
+        if is_next_day: h -= 24
+
+        # solve minutes
+        if m > 59: return None
+
+        # round, and fix 58 and 59 rounding to 60
+        m = int(5 * round(float(m) / 5))
+        if m == 60: m = 55
+
+        # format to XX:XX
+        h_str = str(h)
+        if len(h_str) < 2: h_str = "0" + h_str
+        m_str = str(m)
+        if len(m_str) < 2: m_str = "0" + m_str
+
+        time = as_time(h_str + ":" + m_str)
+
+        # add day if needed
+        if is_next_day: forced_date += datetime.timedelta(days=1)
+
+        # return combined
+        return datetime.datetime.combine(forced_date, time)
 
 
 
@@ -82,56 +190,20 @@ def get_months(spreadsheet_id):
     return months
 
 
-def validate_time(time_str: str, forced_date: datetime.date) -> datetime.datetime:
-    """
-    Validate time in XX:XX format.
-    Return None if fail.
-    """
-    # remove all characters except for digits and ":"
-    time_str = ''.join(c for c in time_str if c in "0123456789:")
 
-    h_m_list = time_str.split(":")
-    if not len(h_m_list) >= 2: return None
-
-    h, m = [int(val) for val in h_m_list[:2]]
-
-    # solve hours
-    is_next_day = not (h % 24 == h)
-    if is_next_day: h -= 24
-
-    # solve minutes
-    if m > 59: return None
-
-    # round, and fix 58 and 59 rounding to 60
-    m = int(5 * round(float(m) / 5))
-    if m == 60: m = 55
-
-    # format to XX:XX
-    h_str = str(h)
-    if len(h_str) < 2: h_str = "0" + h_str
-    m_str = str(m)
-    if len(m_str) < 2: m_str = "0" + m_str
-
-    time = as_time(h_str + ":" + m_str)
-
-    # add day if needed
-    if is_next_day: forced_date += datetime.timedelta(days=1)
-
-    # return combined
-    return datetime.datetime.combine(forced_date, time)
 
 
 def as_time(time_str):
     return datetime.datetime.strptime(time_str, "%H:%M").time()
 
 
-def is_time_string(time_str):
-    try:
-        time = as_time(time_str)
-    except:
-        time = None
-
-    return isinstance(time, datetime.time)
+# def is_time_string(time_str):
+#     try:
+#         time = as_time(time_str)
+#     except:
+#         time = None
+#
+#     return isinstance(time, datetime.time)
 
 
 def as_date(date_str):

@@ -1,9 +1,14 @@
 from datetime import datetime
 
+import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
+
+from gsheets_data_parser import Day
 from html_id import HtmlId
+import os
+from pathlib import Path
 
 def fill(months, month_idx, days_idxes):
     days_to_fill = [day for idx in days_idxes for day in months[month_idx].days if idx == day.date.day]
@@ -11,9 +16,22 @@ def fill(months, month_idx, days_idxes):
     # for day in days_to_fill:
 
 
-def fill_day(day):
+
+class Entry:
+    """Single timesheet entry representation"""
+    def __init__(self, start: datetime, end: datetime, work_data):
+        pass
+
+
+
+def fill_day(day: Day):
+    pass
+
+
+# TODO: change param to job entry
+def fill_job(day: Day):
     driver = webdriver.Chrome("./chromedriver.exe")
-    driver.get("file:///Y:/Python/PyTSF/timesheet_form.html")
+    driver.get(Path("timesheet_form.html").resolve().as_posix())
     # driver.get("http://pawelgrz:p4w3l@192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx")
     # assert "Python" in driver.title
     # elem = driver.find_element_by_name("q")
@@ -62,8 +80,8 @@ def fill_day(day):
     set_time(start_minutes, day.start_time, False)
     end_date.clear()
 
-
-    # driver.close()
+    time.sleep(3)
+    driver.close()
 
 
 def set_time(element: Select, time: datetime, is_hour: bool):
