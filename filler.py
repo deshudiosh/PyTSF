@@ -1,51 +1,38 @@
-from datetime import datetime
-
 import time
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 
-from gsheets_data_parser import Day
+from gsheets_data_parser import Job
 from html_id import HtmlId
-import os
-from pathlib import Path
 
+# TODO: redundant method ?
 def fill(months, month_idx, days_idxes):
     days_to_fill = [day for idx in days_idxes for day in months[month_idx].days if idx == day.date.day]
 
-    # for day in days_to_fill:
+    fill_days(days_to_fill)
 
 
-
-class Entry:
-    """Single timesheet entry representation"""
-    def __init__(self, start: datetime, end: datetime, work_data):
-        pass
-
-
-
-def fill_day(day: Day):
-    pass
-
-
-# TODO: change param to job entry
-def fill_job(day: Day):
+def fill_days(days: list):
     driver = webdriver.Chrome("./chromedriver.exe")
-    driver.get(Path("timesheet_form.html").resolve().as_posix())
-    # driver.get("http://pawelgrz:p4w3l@192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx")
-    # assert "Python" in driver.title
-    # elem = driver.find_element_by_name("q")
+    for day in days:
+        for job in day.jobs:
+            fill_job(driver, job)
 
-    # Click 'new' button
-    # driver.find_element_by_id("zz10_NewMenu").click()
+def fill_job(driver: webdriver,  job: Job):
 
-    kategoria = driver.find_element_by_id(HtmlId.kategoria)
+    # TODO: move timesheet login and password to Settings
+    # driver.get(Path("timesheet_form.html").resolve().as_posix())
+    driver.get("http://pawelgrz:p4w3l@192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx")
+    driver.find_element_by_id("zz10_NewMenu").click()
+
+    # Elements
+    kategoria = Select(driver.find_element_by_id(HtmlId.kategoria))
     klient = driver.find_element_by_id(HtmlId.klient)
     project = driver.find_element_by_id(HtmlId.project)
     osoba_zlecajaca = driver.find_element_by_id(HtmlId.osoba_zlecajaca)
-    developer = driver.find_element_by_id(HtmlId.developer)
-    rodzaj_czynnosci = driver.find_element_by_id(HtmlId.rodzaj_czynnosci)
-    faza = driver.find_element_by_id(HtmlId.faza)
+    developer = Select(driver.find_element_by_id(HtmlId.developer))
+    rodzaj_czynnosci = Select(driver.find_element_by_id(HtmlId.rodzaj_czynnosci))
+    faza = Select(driver.find_element_by_id(HtmlId.faza))
 
     start_date = driver.find_element_by_id(HtmlId.start_date)
     start_hours = Select(driver.find_element_by_id(HtmlId.start_hours))
@@ -57,32 +44,34 @@ def fill_job(day: Day):
     description = driver.find_element_by_id(HtmlId.description)
     all_day_event = driver.find_element_by_id(HtmlId.all_day_event)
 
+    ok_button = driver.find_element_by_id(HtmlId.ok_button)
 
-    # print(kategoria.tag_name)
-    # print(klient.tag_name)
-    # print(project.tag_name)
-    # print(osoba_zlecajaca.tag_name)
-    # print(developer.tag_name)
-    # print(rodzaj_czynnosci.tag_name)
-    # print(faza.tag_name)
-    # print(start_date.tag_name)
-    # print(start_hours.tag_name)
-    # print(start_minutes.tag_name)
-    # print(end_date.tag_name)
-    # print(end_hours.tag_name)
-    # print(end_minutes.tag_name)
-    # print(description.tag_name)
-    # print(all_day_event.tag_name)
+    # Assign values
+    kategoria.select_by_visible_text(job.kategoria)
+    klient.send_keys(job.klient)
+    project.send_keys(job.project)
+    osoba_zlecajaca.send_keys(job.osoba_zlecajaca)
+    developer.select_by_visible_text(job.developer)
+    rodzaj_czynnosci.select_by_visible_text(job.rodzaj_czynnosci)
+    faza.select_by_visible_text(job.faza)
+
+    description.send_keys(job.description)
+
+    if job.all_day_event:
+        driver.execute_script("".join(["document.getElementById('",
+                                       HtmlId.all_day_event,
+                                       "').setAttribute('checked', 'checked')"]))
+    else:
+        start_hours.select_by_visible_text(job.start_hours)
+        start_minutes.select_by_visible_text(job.start_minutes)
+        end_hours.select_by_visible_text(job.end_hours)
+        end_minutes.select_by_visible_text(job.end_minutes)
 
     start_date.clear()
-    start_date.send_keys(str(day.date))
-    set_time(start_hours, day.start_time, True)
-    set_time(start_minutes, day.start_time, False)
+    start_date.send_keys(job.start_date)
     end_date.clear()
+    end_date.send_keys(job.end_date)
 
-    time.sleep(3)
-    driver.close()
+    ok_button.send_keys("\n")
 
-
-def set_time(element: Select, time: datetime, is_hour: bool):
-    element.select_by_visible_text(str(time.hour) + ":" if is_hour else str(time.minute))
+    # time.sleep(5)

@@ -53,8 +53,10 @@ def _ask_days(months, month_idx):
             if len(days) >= 1:
                 break
 
+    # todo: skrypt informuje ze zostanie uzupelnoony caly podany zakres, zamiast faktyczne dni ktore zostana uzupelnione
     print("\nTe dni będą wypelnione:")
     print(days)
+    # todo: change to filler.fill_days ?
     filler.fill(months, month_idx, days)
 
 def ask(months):

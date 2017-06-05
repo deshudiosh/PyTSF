@@ -4,22 +4,18 @@ import cmd_questions
 import filler
 import gsheets_data_parser
 
+# todo: Load settings from file
 settings = {"name": "Paweł Grzelak",
             "spreadsheetId": "1jXygiAnEQ-BzK7ZMkduJMA0QETZ2_-8IE-jUQsmZ7-4"}
 
 
 def tests():
-    day1 = gsheets_data_parser.Day(["2017-05-24", "10:20", "13:00", "13:30", "17:59", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", ""])
-    print(day1, "\n")
+    day1 = gsheets_data_parser.Day(["2017-05-24", "9:20", "13:00", "13:30", "18:00", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", ""])
     day2 = gsheets_data_parser.Day(["2017-05-24", "10:20", "", "", "17:59", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", ""])
-    print(day2, "\n")
     day3 = gsheets_data_parser.Day(["2017-05-24", "10:20", "", "", "17:59", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", "MSD;MSD;Adam Urbaniak;MSD"])
-    print(day3, "\n")
-    day4 = gsheets_data_parser.Day(["2017-05-24", "10:20", "13:00", "13:30", "17:59", "Dzień wolny", ""])
-    print(day4, "\n")
-    # filler.fill_day(day)
-    pass
-
+    day4 = gsheets_data_parser.Day(["2017-05-24", "9:20", "13:00", "13:30", "17:59", "Dzień wolny", ""])
+    # filler.fill_days([day1, day2, day3, day4])
+    filler.fill_days([day1])
 
 
 def main():
@@ -31,6 +27,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # gui.startApp()
-    # main()
-    tests()
+    main()
+    # tests()

@@ -1,24 +1,68 @@
 import datetime
-import timeit
 
 import sheetsapi
 
 
 class Job(object):
-    def __init__(self, start = None, end = None, data = None, is_free_day = False, is_lunch = False):
+    def __init__(self, start: datetime.datetime, end: datetime.datetime = None, data = None, is_free_day = False, is_lunch = False):
         self.is_free_day = is_free_day
         self.is_lunch = is_lunch
-        # todo: assign elements (klient, projekt ect)
 
-    def __repr__(self) -> str:
-        if self.is_free_day:
-            s = "Freeday"
-        elif self.is_lunch:
-            s = "Lunch"
+        if is_free_day:
+            self.start_date = str(start)
+            self.end_date = str(start)
         else:
-            s = "Work"
+            self.start_date = str(start.date())
+            self.start_hours = Job._get_time_str(start, True)
+            self.start_minutes = Job._get_time_str(start, False)
+            self.end_date = str(end.date())
+            self.end_hours = Job._get_time_str(end, True)
+            self.end_minutes = Job._get_time_str(end, False)
 
-        return "<" + s + ">"
+        self.developer = "Nie dotyczy"
+
+        # todo: get name from settings
+        if is_free_day:
+            self.kategoria = "Dzień wolny"
+            self.klient = "Paweł Grzelak"
+            self.project = "Dzień wolny"
+            self.osoba_zlecajaca = "Paweł Grzelak"
+            self.rodzaj_czynnosci = "Dzien wolny"
+            self.faza = "Nie dotyczy"
+            self.description = "Dzień wolny"
+            self.all_day_event = True
+
+        elif is_lunch:
+            self.kategoria = "Lunch"
+            self.klient = "Paweł Grzelak"
+            self.project = "Lunch"
+            self.osoba_zlecajaca = "Paweł Grzelak"
+            self.rodzaj_czynnosci = "Lunch"
+            self.faza = "Nie dotyczy"
+            self.description = "Lunch"
+            self.all_day_event = False
+
+        elif data and len(data) == 4:
+            self.kategoria = "Wizualizacje"
+            self.klient = str(data[0])
+            self.project = str(data[1])
+            self.osoba_zlecajaca = str(data[2])
+            self.rodzaj_czynnosci = "Modelowanie"
+            self.faza = "Nie dotyczy"
+            self.description = str(data[3])
+            self.all_day_event = False
+
+    @staticmethod
+    def _get_time_str(time: datetime, is_hour: bool):
+        # print(time.minute)
+        h = str(time.hour) + ":"
+        h = h if len(h) == 3 else "0" + h
+        m = str(time.minute)
+        m = m if len(m) == 2 else "0" + m
+        return h if is_hour else m
+
+    def __repr__(self):
+        return str(self.__dict__)
 
 
 class Day:
@@ -43,11 +87,6 @@ class Day:
 
         self.jobs = []
 
-        # if self.is_valid:
-        print(row_data)
-        # print(" ".join(["valid:", str(self.is_valid),
-        #                 "   has lunch:", str(self.has_lunch),
-        #                 "   single_job:", str(self.single_job)]))
         self._create_jobs()
 
     def __repr__(self):
@@ -57,7 +96,7 @@ class Day:
         """ Day schemes """
         # -> free day"""
         if self.is_free_day:
-            self.jobs.append(Job(is_free_day=True))
+            self.jobs.append(Job(self.date, is_free_day=True))
             return
 
         # -> day with lunch

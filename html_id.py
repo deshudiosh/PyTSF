@@ -16,3 +16,5 @@ class HtmlId:
 
     description = "ctl00_m_g_7c2ce97f_8ac4_4b04_bee8_08dd2b1efaeb_ctl00_ctl04_ctl09_ctl00_ctl00_ctl04_ctl00_ctl00_TextField"
     all_day_event = "ctl00_m_g_7c2ce97f_8ac4_4b04_bee8_08dd2b1efaeb_ctl00_ctl04_ctl10_ctl00_ctl00_ctl04_ctl00_ctl00_AllDayEventField"
+
+    ok_button = "ctl00_m_g_7c2ce97f_8ac4_4b04_bee8_08dd2b1efaeb_ctl00_toolBarTbl_RightRptControls_ctl00_ctl00_diidIOSaveItem"
