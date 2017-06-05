@@ -7,11 +7,11 @@ block_cipher = None
 
 # TRY DOT NOTATION
 added_files = [  
-	('C:/Python35/Lib/site-packages/remi/res/style.css', './res/style.css') 
+#	('C:/Python35/Lib/site-packages/remi/res/style.css', './res/style.css') 
 	]
 
 binary_files = [
-		('C:/Python35/chromedriver.exe', '.\\selenium\\webdriver')
+		('./chromedriver.exe', '.')
 	]
 	
 

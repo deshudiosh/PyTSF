@@ -1,5 +1,6 @@
 # MY IGNORES
 build/
+dist/
 __pycache__/
 client_secret.json
 sheets.googleapis.com-python.json
