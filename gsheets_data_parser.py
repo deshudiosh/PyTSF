@@ -216,6 +216,7 @@ def get_months(spreadsheet_id):
     # Collect worksheets names
     names = [sheet['properties']['title'] for sheet in worksheets]
 
+    # TODO: get all data with one call, and sort later <- Performance!
     # Get data A1:H31 for each month (sheet name is valid A1 notation range too!)
     sheets_data = [sheetsapi.get_range_data(spreadsheet_id, name) for name in names]
 

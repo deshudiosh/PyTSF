@@ -3,6 +3,7 @@ import datetime
 import cmd_questions
 import filler
 import gsheets_data_parser
+from settings import Settings
 
 # todo: Load settings from file
 settings = {"name": "Paweł Grzelak",
@@ -27,5 +28,6 @@ def main():
 
 
 if __name__ == '__main__':
+    Settings.load()
     main()
     # tests()
