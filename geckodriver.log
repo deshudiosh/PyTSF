@@ -1,0 +1,575 @@
+1500542757715	geckodriver	INFO	geckodriver 0.18.0
+1500542757731	geckodriver	INFO	Listening on 127.0.0.1:57084
+error: Found argument '-e' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver.exe -v
+
+For more information try --help
+1500542767521	geckodriver	INFO	geckodriver 0.18.0
+1500542767537	geckodriver	INFO	Listening on 127.0.0.1:57099
+1500542790021	geckodriver	INFO	geckodriver 0.18.0
+1500542790037	geckodriver	INFO	Listening on 127.0.0.1:57127
+1500542845261	geckodriver	INFO	geckodriver 0.18.0
+1500542845277	geckodriver	INFO	Listening on 127.0.0.1:57184
+1500542847313	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500542849555	Marionette	INFO	Listening on port 57192
+1500542850450	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500542857203	Marionette	INFO	Ceased listening
+1500542867592	geckodriver	INFO	geckodriver 0.18.0
+1500542867602	geckodriver	INFO	Listening on 127.0.0.1:57229
+1500542869658	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500542871954	Marionette	INFO	Listening on port 57237
+1500542872794	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500542875846	Marionette	INFO	Ceased listening
+1500542885483	geckodriver	INFO	geckodriver 0.18.0
+1500542885500	geckodriver	INFO	Listening on 127.0.0.1:57269
+1500542887539	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500542889839	Marionette	INFO	Listening on port 57277
+1500542890669	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500542894367	Marionette	INFO	Ceased listening
+1500542898346	geckodriver	INFO	geckodriver 0.18.0
+1500542898355	geckodriver	INFO	Listening on 127.0.0.1:57307
+1500542900405	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500542902775	Marionette	INFO	Listening on port 57315
+1500542903533	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/components/nsUrlClassifierListManager.js, line 536: TypeError: this.tablesData[table] is undefined
+1500542907828	Marionette	INFO	Ceased listening
+1500542993578	geckodriver	INFO	geckodriver 0.18.0
+1500542993594	geckodriver	INFO	Listening on 127.0.0.1:57435
+1500542995650	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500542997922	Marionette	INFO	Listening on port 57443
+1500542998778	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543003230	Marionette	INFO	Ceased listening
+1500543019896	geckodriver	INFO	geckodriver 0.18.0
+1500543019909	geckodriver	INFO	Listening on 127.0.0.1:57486
+1500543021950	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543024221	Marionette	INFO	Listening on port 57494
+1500543025079	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543064909	Marionette	INFO	Ceased listening
+1500543068710	geckodriver	INFO	geckodriver 0.18.0
+1500543068721	geckodriver	INFO	Listening on 127.0.0.1:57558
+1500543070781	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543072981	Marionette	INFO	Listening on port 57566
+1500543073914	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543095462	Marionette	INFO	Ceased listening
+1500543096459	geckodriver	INFO	geckodriver 0.18.0
+1500543096471	geckodriver	INFO	Listening on 127.0.0.1:57616
+1500543098527	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543100767	Marionette	INFO	Listening on port 57625
+1500543101656	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543143860	Marionette	INFO	Ceased listening
+0
+1500543128035	geckodriver	INFO	Listening on 127.0.0.1:57676
+1500543130090	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543132371	Marionette	INFO	Listening on port 57683
+1500543133226	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543142355	Marionette	INFO	Ceased listening
+1500543429249	geckodriver	INFO	geckodriver 0.18.0
+1500543429262	geckodriver	INFO	Listening on 127.0.0.1:57999
+1500543476734	geckodriver	INFO	geckodriver 0.18.0
+1500543476748	geckodriver	INFO	Listening on 127.0.0.1:58065
+1500543478804	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543481296	Marionette	INFO	Listening on port 58073
+1500543481945	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543486490	Marionette	INFO	Ceased listening
+1500543495722	geckodriver	INFO	geckodriver 0.18.0
+1500543495737	geckodriver	INFO	Listening on 127.0.0.1:58109
+1500543497793	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543500291	Marionette	INFO	Listening on port 58117
+1500543500930	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543556284	Marionette	INFO	Ceased listening
+0
+1500543520610	geckodriver	INFO	Listening on 127.0.0.1:58163
+1500543522661	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543524946	Marionette	INFO	Listening on port 58171
+1500543525790	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543531833	Marionette	INFO	Ceased listening
+1500543540842	geckodriver	INFO	geckodriver 0.18.0
+1500543540858	geckodriver	INFO	Listening on 127.0.0.1:58213
+1500543542913	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543545188	Marionette	INFO	Listening on port 58221
+1500543546042	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543555214	Marionette	INFO	Ceased listening
+1500543570585	geckodriver	INFO	geckodriver 0.18.0
+1500543570595	geckodriver	INFO	Listening on 127.0.0.1:58270
+1500543572650	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543574973	Marionette	INFO	Listening on port 58278
+1500543575784	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543583258	Marionette	INFO	Ceased listening
+1500543592471	geckodriver	INFO	geckodriver 0.18.0
+1500543592486	geckodriver	INFO	Listening on 127.0.0.1:58323
+1500543594544	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543596844	Marionette	INFO	Listening on port 58331
+1500543597675	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543688739	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1500543688741	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1500543689000	Marionette	INFO	Ceased listening
+rionette"]
+1500543653684	Marionette	INFO	Listening on port 58408
+1500543654528	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1500543686822	Marionette	INFO	Ceased listening
+1500543733115	geckodriver	INFO	geckodriver 0.18.0
+1500543733128	geckodriver	INFO	Listening on 127.0.0.1:58534
+1500543735187	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543737620	Marionette	INFO	Listening on port 58542
+1500543738318	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1500543746313	Marionette	INFO	Ceased listening
+1500543763065	geckodriver	INFO	geckodriver 0.18.0
+1500543763075	geckodriver	INFO	Listening on 127.0.0.1:58594
+1500543765132	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543767489	Marionette	INFO	Listening on port 58602
+1500543768262	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543783359	Marionette	INFO	Ceased listening
+0
+1500543772399	geckodriver	INFO	Listening on 127.0.0.1:58628
+1500543774440	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543776884	Marionette	INFO	Listening on port 58636
+1500543777570	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1500543781732	Marionette	INFO	Ceased listening
+1500543822766	geckodriver	INFO	geckodriver 0.18.0
+1500543822776	geckodriver	INFO	Listening on 127.0.0.1:58714
+1500543824833	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543827337	Marionette	INFO	Listening on port 58722
+1500543827966	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1500543862941	Marionette	INFO	Ceased listening
+0
+1500543855099	geckodriver	INFO	Listening on 127.0.0.1:58779
+1500543857148	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543859540	Marionette	INFO	Listening on port 58787
+1500543860278	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500543862590	Marionette	INFO	Ceased listening
+1500543902440	geckodriver	INFO	geckodriver 0.18.0
+1500543902453	geckodriver	INFO	Listening on 127.0.0.1:58879
+1500543904508	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543906958	Marionette	INFO	Listening on port 58887
+1500543907692	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1500543914388	Marionette	INFO	Ceased listening
+1500543965672	geckodriver	INFO	geckodriver 0.18.0
+1500543965689	geckodriver	INFO	Listening on 127.0.0.1:58985
+1500543967727	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500543970126	Marionette	INFO	Listening on port 58992
+1500543970857	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1500543981628	Marionette	INFO	Ceased listening
+1501506275928	geckodriver	INFO	geckodriver 0.18.0
+1501506275944	geckodriver	INFO	Listening on 127.0.0.1:59920
+1501506278013	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506281045	Marionette	INFO	Listening on port 59926
+1501506281175	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501506343518	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1501506343521	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1501506343729	Marionette	INFO	Ceased listening
+rionette"]
+1501506333422	Marionette	INFO	Listening on port 59956
+1501506334218	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501506341618	Marionette	INFO	Ceased listening
+1501506344813	geckodriver	INFO	geckodriver 0.18.0
+1501506344825	geckodriver	INFO	Listening on 127.0.0.1:59986
+1501506346876	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506349381	Marionette	INFO	Listening on port 59992
+1501506350014	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501506389603	Marionette	INFO	Ceased listening
+1501506391899	geckodriver	INFO	geckodriver 0.18.0
+1501506391916	geckodriver	INFO	Listening on 127.0.0.1:60020
+1501506393952	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506396325	Marionette	INFO	Listening on port 60026
+1501506397079	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501506403966	Marionette	INFO	Ceased listening
+1501506485216	geckodriver	INFO	geckodriver 0.18.0
+1501506485227	geckodriver	INFO	Listening on 127.0.0.1:60058
+1501506487262	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506489715	Marionette	INFO	Listening on port 60064
+1501506490392	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501506496867	Marionette	INFO	Ceased listening
+1501506506980	geckodriver	INFO	geckodriver 0.18.0
+1501506506991	geckodriver	INFO	Listening on 127.0.0.1:60095
+1501506509050	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506511471	Marionette	INFO	Listening on port 60101
+1501506512180	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/components/nsUrlClassifierListManager.js, line 536: TypeError: this.tablesData[table] is undefined
+1501506515915	Marionette	INFO	Ceased listening
+1501506533504	geckodriver	INFO	geckodriver 0.18.0
+1501506533520	geckodriver	INFO	Listening on 127.0.0.1:60124
+1501506535555	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506537928	Marionette	INFO	Listening on port 60130
+1501506538684	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501506637271	Marionette	INFO	Ceased listening
+0
+1501506599649	geckodriver	INFO	Listening on 127.0.0.1:60165
+1501506601701	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506604127	Marionette	INFO	Listening on port 60171
+1501506604836	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501506610131	Marionette	INFO	Ceased listening
+1501506625678	geckodriver	INFO	geckodriver 0.18.0
+1501506625688	geckodriver	INFO	Listening on 127.0.0.1:60193
+1501506627738	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506630124	Marionette	INFO	Listening on port 60199
+1501506630879	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501506636525	Marionette	INFO	Ceased listening
+1501506640439	geckodriver	INFO	geckodriver 0.18.0
+1501506640449	geckodriver	INFO	Listening on 127.0.0.1:60223
+1501506642495	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506644958	Marionette	INFO	Listening on port 60230
+1501506645624	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501506651826	Marionette	INFO	Ceased listening
+1501506663627	geckodriver	INFO	geckodriver 0.18.0
+1501506663637	geckodriver	INFO	Listening on 127.0.0.1:60256
+1501506665689	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506668055	Marionette	INFO	Listening on port 60262
+1501506668816	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501506678126	Marionette	INFO	Ceased listening
+1501506729239	geckodriver	INFO	geckodriver 0.18.0
+1501506729250	geckodriver	INFO	Listening on 127.0.0.1:60288
+1501506731317	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506734081	Marionette	INFO	Listening on port 60294
+1501506734464	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501506737929	Marionette	INFO	Ceased listening
+1501506749588	geckodriver	INFO	geckodriver 0.18.0
+1501506749604	geckodriver	INFO	Listening on 127.0.0.1:60318
+1501506751652	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506754210	Marionette	INFO	Listening on port 60324
+1501506754780	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501506791554	Marionette	INFO	Ceased listening
+0
+1501506781490	geckodriver	INFO	Listening on 127.0.0.1:60356
+1501506783538	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506786013	Marionette	INFO	Listening on port 60362
+1501506786667	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501506790458	Marionette	INFO	Ceased listening
+1501506794810	geckodriver	INFO	geckodriver 0.18.0
+1501506794823	geckodriver	INFO	Listening on 127.0.0.1:60390
+1501506796880	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506799185	Marionette	INFO	Listening on port 60396
+1501506800012	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501506802817	Marionette	INFO	Ceased listening
+1501506805433	geckodriver	INFO	geckodriver 0.18.0
+1501506805446	geckodriver	INFO	Listening on 127.0.0.1:60423
+1501506807502	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506809877	Marionette	INFO	Listening on port 60429
+1501506810633	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501506818564	Marionette	INFO	Ceased listening
+1501506832796	geckodriver	INFO	geckodriver 0.18.0
+1501506832806	geckodriver	INFO	Listening on 127.0.0.1:60462
+1501506834864	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501506837205	Marionette	INFO	Listening on port 60468
+1501506837993	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1501508833700	Marionette	INFO	Ceased listening
+1501507046514	Marionette	INFO	Listening on port 60513
+1501507047146	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501507190108	Marionette	INFO	Ceased listening
+0
+1501507058772	geckodriver	INFO	Listening on 127.0.0.1:60536
+1501507060823	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501507063270	Marionette	INFO	Listening on port 60542
+1501507063953	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501507187682	Marionette	INFO	Ceased listening
+0
+1501507107245	geckodriver	INFO	Listening on 127.0.0.1:60571
+1501507109300	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501507111566	Marionette	INFO	Listening on port 60577
+1501507112421	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501507117915	Marionette	INFO	Ceased listening
+1501507119032	geckodriver	INFO	geckodriver 0.18.0
+1501507119041	geckodriver	INFO	Listening on 127.0.0.1:60602
+1501507121091	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501507123604	Marionette	INFO	Listening on port 60608
+1501507124221	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501507186227	Marionette	INFO	Ceased listening
+0
+1501507168068	geckodriver	INFO	Listening on 127.0.0.1:60644
+1501507170122	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501507172518	Marionette	INFO	Listening on port 60650
+1501507173262	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501507185293	Marionette	INFO	Ceased listening
+1501507511880	geckodriver	INFO	geckodriver 0.18.0
+1501507511890	geckodriver	INFO	Listening on 127.0.0.1:60728
+1501507513940	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501507516376	Marionette	INFO	Listening on port 60734
+1501507517080	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501507525428	Marionette	INFO	Ceased listening
+1501507531008	geckodriver	INFO	geckodriver 0.18.0
+1501507531024	geckodriver	INFO	Listening on 127.0.0.1:60763
+1501507533061	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501507535483	Marionette	INFO	Listening on port 60769
+1501507536193	Marionette	WARN	TLS certificate errors will be ignored for this session
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1501508831155	Marionette	INFO	Ceased listening
+1501507569255	Marionette	INFO	Listening on port 60796
+1501507569927	Marionette	WARN	TLS certificate errors will be ignored for this session
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: openModalWindow@resource://gre/components/nsPrompter.js:363:5
+openPrompt@resource://gre/components/nsPrompter.js:553:9
+nsIPrompt_promptUsernameAndPassword@resource://gre/components/nsPrompter.js:744:9
+promptAuth@resource://gre/components/nsPrompter.js:843:18
+promptAuth@resource://gre/components/nsPrompter.js:108:16
+promptAuth@resource://gre/components/nsLoginManagerPrompter.js:621:12
+run@resource://gre/components/nsLoginManagerPrompter.js:123:18
+
+*************************
+JavaScript error: resource://gre/components/nsUrlClassifierListManager.js, line 536: TypeError: this.tablesData[table] is undefined
+1501508828195	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1501508828214	Marionette	INFO	Ceased listening
+1501512207410	geckodriver	INFO	geckodriver 0.18.0
+1501512207424	geckodriver	INFO	Listening on 127.0.0.1:61641
+1501512209466	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501512212122	Marionette	INFO	Listening on port 61647
+1501512212632	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501512226217	geckodriver	INFO	geckodriver 0.18.0
+1501512226231	geckodriver	INFO	Listening on 127.0.0.1:61670
+1501512228290	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501512230701	Marionette	INFO	Listening on port 61676
+1501512231420	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501512247885	geckodriver	INFO	geckodriver 0.18.0
+1501512247896	geckodriver	INFO	Listening on 127.0.0.1:61696
+1501512249961	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501512252345	Marionette	INFO	Listening on port 61702
+1501512253091	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501512470978	geckodriver	INFO	geckodriver 0.18.0
+1501512470988	geckodriver	INFO	Listening on 127.0.0.1:61759
+1501512482793	geckodriver	INFO	geckodriver 0.18.0
+1501512482803	geckodriver	INFO	Listening on 127.0.0.1:61761
+1501512484848	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501512487223	Marionette	INFO	Listening on port 61767
+1501512487974	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501512515941	geckodriver	INFO	geckodriver 0.18.0
+1501512515952	geckodriver	INFO	Listening on 127.0.0.1:61786
+1501512517983	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501512520452	Marionette	INFO	Listening on port 61792
+1501512521113	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501512524395	Marionette	INFO	Ceased listening
+1501512533589	geckodriver	INFO	geckodriver 0.18.0
+1501512533605	geckodriver	INFO	Listening on 127.0.0.1:61811
+1501512535645	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501512537965	Marionette	INFO	Listening on port 61817
+1501512538774	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501512543088	Marionette	INFO	Ceased listening
+1501512551377	geckodriver	INFO	geckodriver 0.18.0
+1501512551392	geckodriver	INFO	Listening on 127.0.0.1:61838
+1501512553438	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501512555704	Marionette	INFO	Listening on port 61844
+1501512556566	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501512561458	Marionette	INFO	Ceased listening
+1501512571869	geckodriver	INFO	geckodriver 0.18.0
+1501512571880	geckodriver	INFO	Listening on 127.0.0.1:61870
+1501512573928	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501512576242	Marionette	INFO	Listening on port 61876
+1501512577056	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501512620966	Marionette	INFO	Ceased listening
+1501512631249	geckodriver	INFO	geckodriver 0.18.0
+1501512631263	geckodriver	INFO	Listening on 127.0.0.1:61904
+1501512633299	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501512635560	Marionette	INFO	Listening on port 61910
+1501512636427	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1501514851870	Marionette	INFO	Ceased listening
+1501512688939	Marionette	INFO	Listening on port 61946
+1501512689818	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1501514852431	Marionette	INFO	Ceased listening
+1501512761625	Marionette	INFO	Listening on port 62051
+1501512762156	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1501514852928	Marionette	INFO	Ceased listening
+1501512806872	Marionette	INFO	Listening on port 62086
+1501512807724	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1501514853377	Marionette	INFO	Ceased listening
+0
+1501514723505	geckodriver	INFO	Listening on 127.0.0.1:62180
+1501514725559	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501514728085	Marionette	INFO	Listening on port 62186
+1501514728689	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501514853855	Marionette	INFO	Ceased listening
+0
+1501514746447	geckodriver	INFO	Listening on 127.0.0.1:62206
+1501514748499	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501514750837	Marionette	INFO	Listening on port 62212
+1501514751659	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501514758898	Marionette	INFO	Ceased listening
+1501514778864	geckodriver	INFO	geckodriver 0.18.0
+1501514778876	geckodriver	INFO	Listening on 127.0.0.1:62238
+1501514780921	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501514783208	Marionette	INFO	Listening on port 62244
+1501514784049	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after1501514806792	gecko1501514819406	Marionette	INFO	Ceased listening
+ram Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501514809355	Marionette	INFO	Listening on port 62286
+1501514809920	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501514818543	Marionette	INFO	Ceased listening
+1501514832740	geckodriver	INFO	geckodriver 0.18.0
+1501514832753	geckodriver	INFO	Listening on 127.0.0.1:62314
+1501514834811	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501514837174	Marionette	INFO	Listening on port 62320
+1501514837940	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501514850196	Marionette	INFO	Ceased listening
+1501514906143	geckodriver	INFO	geckodriver 0.18.0
+1501514906159	geckodriver	INFO	Listening on 127.0.0.1:62351
+1501514908196	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501514910498	Marionette	INFO	Listening on port 62357
+1501514911327	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501514983192	Marionette	INFO	Ceased listening
+0
+1501514954408	geckodriver	INFO	Listening on 127.0.0.1:62382
+1501514956463	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501514959117	Marionette	INFO	Listening on port 62388
+1501514959591	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501514974081	Marionette	INFO	Ceased listening
+1501515327719	geckodriver	INFO	geckodriver 0.18.0
+1501515327732	geckodriver	INFO	Listening on 127.0.0.1:62417
+1501515329759	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501515332961	Marionette	INFO	Listening on port 62423
+1501515333473	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501515417515	Marionette	INFO	Ceased listening
+0
+1501515387459	geckodriver	INFO	Listening on 127.0.0.1:62451
+1501515389519	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501515392204	Marionette	INFO	Listening on port 62457
+1501515392651	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501515416409	Marionette	INFO	Ceased listening
+0
+1501515415389	geckodriver	INFO	Listening on 127.0.0.1:62493
+1501515417438	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501515420087	Marionette	INFO	Listening on port 62499
+1501515420567	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501515941182	Marionette	INFO	Ceased listening
+0
+1501515475490	geckodriver	INFO	Listening on 127.0.0.1:62528
+1501515477511	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501515480251	Marionette	INFO	Listening on port 62534
+1501515480684	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+1501515938890	Marionette	INFO	Ceased listening
+0
+1501515509908	geckodriver	INFO	Listening on 127.0.0.1:62571
+1501515511946	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501515516014	Marionette	INFO	Listening on port 62577
+1501515516152	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/calendar.aspx, line 143: unreachable code after return statement
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/inspector.js, line 2955: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [inIDeepTreeWalker.parentNode]
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/NewForm.aspx?RootFolder=%2FLists%2FTime%20Sheet%203D&Source=http%3A%2F%2F192%2E168%2E1%2E2%2FLists%2FTime%2520Sheet%25203D%2Fcalendar%2Easpx, line 88: unreachable code after return statement
+1501515933251	Marionette	INFO	Ceased listening
+0
+1501515748792	geckodriver	INFO	Listening on 127.0.0.1:62629
+1501515750838	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501515753160	Marionette	INFO	Listening on port 62635
+1501515753968	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/NewForm.aspx?RootFolder=%2FLists%2FTime%20Sheet%203D&Source=http%3A%2F%2F192%2E168%2E1%2E2%2FLists%2FTime%2520Sheet%25203D%2Fcalendar%2Easpx, line 88: unreachable code after return statement
+1501515771041	Marionette	INFO	Ceased listening
+0
+1501515768516	geckodriver	INFO	Listening on 127.0.0.1:62662
+1501515770581	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501515773189	Marionette	INFO	Listening on port 62669
+1501515773732	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/NewForm.aspx?RootFolder=%2FLists%2FTime%20Sheet%203D&Source=http%3A%2F%2F192%2E168%2E1%2E2%2FLists%2FTime%2520Sheet%25203D%2Fcalendar%2Easpx, line 88: unreachable code after return statement
+1501515783344	Marionette	INFO	Ceased listening
+1501515929187	geckodriver	INFO	geckodriver 0.18.0
+1501515929199	geckodriver	INFO	Listening on 127.0.0.1:62739
+1501515931228	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501515934139	Marionette	INFO	Listening on port 62745
+1501515934369	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501515942769	geckodriver	INFO	geckodriver 0.18.0
+1501515942782	geckodriver	INFO	Listening on 127.0.0.1:62769
+1501515944842	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501515947398	Marionette	INFO	Listening on port 62775
+1501515947973	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501516072418	geckodriver	INFO	geckodriver 0.18.0
+1501516072428	geckodriver	INFO	Listening on 127.0.0.1:62807
+1501516074484	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501516077092	Marionette	INFO	Listening on port 62813
+1501516077614	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501516092548	geckodriver	INFO	geckodriver 0.18.0
+1501516092565	geckodriver	INFO	Listening on 127.0.0.1:62835
+1501516094622	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501516097013	Marionette	INFO	Listening on port 62842
+1501516097752	Marionette	WARN	TLS certificate errors will be ignored for this session
+1501516138651	geckodriver	INFO	geckodriver 0.18.0
+1501516138661	geckodriver	INFO	Listening on 127.0.0.1:62865
+1501516140699	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1501516143080	Marionette	INFO	Listening on port 62871
+1501516143834	Marionette	WARN	TLS certificate errors will be ignored for this session
