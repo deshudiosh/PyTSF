@@ -210,24 +210,24 @@ class Month:
 
 
 def get_months(spreadsheet_id):
-    # Get worksheets
-    worksheets = sheetsapi.get_worksheets(spreadsheet_id)
-
     # Collect worksheets names
-    names = [sheet['properties']['title'] for sheet in worksheets]
+    names = [sheet['properties']['title'] for sheet in sheetsapi.get_worksheets(spreadsheet_id)]
 
-    # TODO: get all data with one call, and sort later <- Performance!
-    # Get data A1:H31 for each month (sheet name is valid A1 notation range too!)
-    sheets_data = [sheetsapi.get_range_data(spreadsheet_id, name) for name in names]
+    # Collect all worksheets is spreadsheet
+    worksheets = sheetsapi.get_ranges_batch(spreadsheet_id, ranges=names)
 
-    # Determine if sheet has month data:
-    # If cell A1 contains date string, collect index of sheet (sheet is valid month data).
-    valid_months_indexes = [index for index in range(len(sheets_data))
-                            if is_date_string(sheets_data[index]['values'][0][0])]
-    # Collect parsed months from valid sheets
-    months = [Month(names[idx], sheets_data[idx]['values']) for idx in valid_months_indexes]
+    # Determine if sheet has month data, exclude if not.
+    # If cell A1 contains date string, sheet is valid for collection.
+    worksheets = [worksheet for worksheet in worksheets if is_date_string(worksheet['values'][0][0])]
+
+    months = [Month(
+        # get name from range
+        ws['range'].split("!")[0],
+        ws['values'])
+        for ws in worksheets]
 
     return months
+
 
 
 

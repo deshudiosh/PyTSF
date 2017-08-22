@@ -573,3 +573,9 @@ JavaScript warning: http://192.168.1.2/Lists/Time%20Sheet%203D/NewForm.aspx?Root
 1501516140699	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
 1501516143080	Marionette	INFO	Listening on port 62871
 1501516143834	Marionette	WARN	TLS certificate errors will be ignored for this session
+1503418392397	geckodriver	INFO	geckodriver 0.18.0
+1503418392423	geckodriver	INFO	Listening on 127.0.0.1:50637
+1503418394434	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1503418397381	Marionette	INFO	Listening on port 50643
+1503418397589	Marionette	WARN	TLS certificate errors will be ignored for this session
+1503418406736	Marionette	INFO	Ceased listening

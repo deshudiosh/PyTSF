@@ -11,19 +11,20 @@ settings = {"name": "Paweł Grzelak",
 
 
 def tests():
-    day1 = gsheets_data_parser.Day(["2017-05-24", "9:20", "13:00", "13:30", "18:00", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", ""])
-    day2 = gsheets_data_parser.Day(["2017-05-24", "10:20", "", "", "17:59", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", ""])
-    day3 = gsheets_data_parser.Day(["2017-05-24", "10:20", "", "", "17:59", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", "MSD;MSD;Adam Urbaniak;MSD"])
-    day4 = gsheets_data_parser.Day(["2017-05-24", "9:20", "13:00", "13:30", "17:59", "Dzień wolny", ""])
+    # day1 = gsheets_data_parser.Day(["2017-05-24", "9:20", "13:00", "13:30", "18:00", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", ""])
+    # day2 = gsheets_data_parser.Day(["2017-05-24", "10:20", "", "", "17:59", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", ""])
+    # day3 = gsheets_data_parser.Day(["2017-05-24", "10:20", "", "", "17:59", "Przemysław Stopa;Przemkowe;Przemysław Stopa;Przemkowe", "MSD;MSD;Adam Urbaniak;MSD"])
+    # day4 = gsheets_data_parser.Day(["2017-05-24", "9:20", "13:00", "13:30", "17:59", "Dzień wolny", ""])
     # filler.fill_days([day1, day2, day3, day4])
-    filler.fill_days([day1])
+    # filler.fill_days([day1])
+    months = gsheets_data_parser.get_months_performance(settings['spreadsheetId'])
 
 
 def main():
-    """ Update data, refresh gui """
+    print("\n\nŚciągam dane z googli, czekaj...")
     start = datetime.datetime.now()
     months = gsheets_data_parser.get_months(settings['spreadsheetId'])
-    print("\n\n----------------\nCzas ściągania danych: {0}".format(datetime.datetime.now() - start) + "\n----------------")
+    print("----------------\nCzas ściągania danych: {0}".format(datetime.datetime.now() - start) + "\n----------------")
     cmd_questions.ask(months)
 
 

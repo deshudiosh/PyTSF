@@ -69,7 +69,7 @@ def get_range_data(spreadsheet_id, range):
 
 
 def get_ranges_batch(spreadsheet_id, ranges):
-    return _get_service().spreadsheets().values().batchGet(spreadsheetId=spreadsheet_id, ranges=ranges).execute()
+    return (_get_service().spreadsheets().values().batchGet(spreadsheetId=spreadsheet_id, ranges=ranges).execute())['valueRanges']
 
 
 
